@@ -2,4 +2,6 @@
 
 ## ドキュメントファイルの生成
 
-- ./generate.sh
+```sh
+./generate.sh
+```
