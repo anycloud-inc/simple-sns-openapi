@@ -1,0 +1,29 @@
+# /messages
+get:
+  tags: [messages]
+  operationId: listMessages
+  parameters:
+    - in: query
+      name: pagination
+      schema:
+        $ref: '../../openapi.yaml#/components/schemas/RequestPagination'
+    - in: query
+      name: roomId
+      required: true
+      schema:
+        type: string
+  description: ''
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseMessageList'
+post:
+  tags: [message]
+  operationId: createMessage
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/request/create_message.yaml'
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseMessage'

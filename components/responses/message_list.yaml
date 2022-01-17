@@ -1,0 +1,13 @@
+description: OK
+content:
+  application/json:
+    schema:
+      title: ResponseMessageList
+      type: object
+      properties:
+        messages:
+          type: array
+          items:
+            $ref: '../schemas/entity/message.yaml'
+      required:
+        - messages

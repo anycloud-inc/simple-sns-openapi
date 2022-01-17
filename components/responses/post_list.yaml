@@ -1,0 +1,13 @@
+description: OK
+content:
+  application/json:
+    schema:
+      title: ResponsePostList
+      type: object
+      properties:
+        posts:
+          type: array
+          items:
+            $ref: '../schemas/entity/post.yaml'
+      required:
+        - posts

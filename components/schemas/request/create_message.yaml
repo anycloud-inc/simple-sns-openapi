@@ -1,0 +1,11 @@
+title: RequestCreateMessage
+type: object
+properties:
+  content:
+    type: string
+  roomId:
+    type: string
+
+required:
+  - content
+  - roomId

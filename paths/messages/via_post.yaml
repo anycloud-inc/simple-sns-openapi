@@ -1,0 +1,12 @@
+# /messages/via_post
+post:
+  tags: [message]
+  operationId: createMessageViaPost
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/request/create_message_via_post.yaml'
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseMessage'

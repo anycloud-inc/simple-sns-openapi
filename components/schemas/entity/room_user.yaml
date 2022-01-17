@@ -1,0 +1,17 @@
+type: object
+title: EntityRoomUser
+description: ''
+properties:
+  roomId:
+    type: string
+  userId:
+    type: integer
+  readAt:
+    type: string
+    format: date-time
+  user:
+    $ref: 'user.yaml'
+
+required:
+  - roomId
+  - userId

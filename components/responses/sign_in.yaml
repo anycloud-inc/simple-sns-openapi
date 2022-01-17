@@ -1,0 +1,14 @@
+description: OK
+content:
+  application/json:
+    schema:
+      type: object
+      title: ResponseSignIn
+      properties:
+        user:
+          $ref: '../schemas/entity/account.yaml'
+        token:
+          type: string
+      required:
+        - user
+        - token

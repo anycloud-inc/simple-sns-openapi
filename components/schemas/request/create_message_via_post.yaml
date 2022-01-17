@@ -1,0 +1,11 @@
+title: RequestCreateMessageViaPost
+type: object
+properties:
+  content:
+    type: string
+  postId:
+    type: integer
+
+required:
+  - content
+  - postId

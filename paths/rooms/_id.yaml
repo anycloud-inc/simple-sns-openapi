@@ -1,0 +1,13 @@
+# /rooms/{id}
+parameters:
+  - schema:
+      type: string
+    name: id
+    in: path
+    required: true
+get:
+  tags: [room]
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseRoom'
+  operationId: findRoom

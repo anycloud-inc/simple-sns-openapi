@@ -1,0 +1,71 @@
+openapi: 3.0.2
+info:
+  title: simple-sns API
+  version: 1.0.0
+paths:
+  /auth:
+    $ref: './paths/auth.yaml'
+  /account:
+    $ref: './paths/account.yaml'
+  /account/icon_image:
+    $ref: './paths/account/icon_image.yaml'
+  /account/profile:
+    $ref: './paths/account/profile.yaml'
+  /posts:
+    $ref: './paths/posts/index.yaml'
+  '/posts/{id}':
+    $ref: './paths/posts/_id.yaml'
+  /rooms:
+    $ref: './paths/rooms/index.yaml'
+  '/rooms/{id}':
+    $ref: './paths/rooms/_id.yaml'
+  '/rooms/{id}/read':
+    $ref: './paths/rooms/read.yaml'
+  /messages:
+    $ref: './paths/messages/index.yaml'
+  /messages/via_post:
+    $ref: './paths/messages/via_post.yaml'
+
+components:
+  schemas:
+    EntityMessage:
+      $ref: './components/schemas/entity/message.yaml'
+    EntityAccount:
+      $ref: './components/schemas/entity/account.yaml'
+    EntityPost:
+      $ref: './components/schemas/entity/post.yaml'
+    EntityUser:
+      $ref: './components/schemas/entity/user.yaml'
+    EntityRoom:
+      $ref: './components/schemas/entity/room.yaml'
+    EntityRoomUser:
+      $ref: './components/schemas/entity/room_user.yaml'
+
+  responses:
+    # General Responses
+    ResponseSuccess:
+      $ref: './components/responses/success.yaml'
+    ResponseBadRequest:
+      $ref: './components/responses/bad_request.yaml'
+
+    # Resource Responses
+    ResponseNullableAccount:
+      $ref: './components/responses/nullable_account.yaml'
+    ResponseAccount:
+      $ref: './components/responses/account.yaml'
+    ResponseRoomList:
+      $ref: './components/responses/room_list.yaml'
+    ResponseRoom:
+      $ref: './components/responses/room.yaml'
+    ResponseSignIn:
+      $ref: './components/responses/sign_in.yaml'
+    ResponsePost:
+      $ref: './components/responses/post.yaml'
+    ResponsePostList:
+      $ref: './components/responses/post_list.yaml'
+    ResponseMedia:
+      $ref: './components/responses/media.yaml'
+    ResponseMessageList:
+      $ref: './components/responses/message_list.yaml'
+    ResponseMessage:
+      $ref: './components/responses/message.yaml'

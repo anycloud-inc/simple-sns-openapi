@@ -1,0 +1,11 @@
+description: OK
+content:
+  application/json:
+    schema:
+      title: ResponsePost
+      type: object
+      properties:
+        post:
+          $ref: '../schemas/entity/post.yaml'
+      required:
+        - post

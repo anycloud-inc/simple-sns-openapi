@@ -1,0 +1,19 @@
+type: object
+title: EntityRoom
+description: ''
+properties:
+  id:
+    type: string
+  messages:
+    type: array
+    items:
+      $ref: './message.yaml'
+  roomUsers:
+    type: array
+    items:
+      $ref: './room_user.yaml'
+
+required:
+  - id
+  - messages
+  - roomUsers

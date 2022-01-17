@@ -1,0 +1,13 @@
+description: OK
+content:
+  application/json:
+    schema:
+      title: ResponseRoomList
+      type: object
+      properties:
+        rooms:
+          type: array
+          items:
+            $ref: '../schemas/entity/room.yaml'
+      required:
+        - rooms

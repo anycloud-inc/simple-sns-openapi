@@ -1,0 +1,9 @@
+description: OK
+content:
+  application/json:
+    schema:
+      title: ResponseNullableAccount
+      type: object
+      properties:
+        user:
+          $ref: '../schemas/entity/account.yaml'

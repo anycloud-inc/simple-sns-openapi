@@ -1,0 +1,20 @@
+# /rooms
+get:
+  tags: [room]
+  operationId: findRoomList
+  description: ''
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseRoomList'
+post:
+  tags: [room]
+  operationId: findOrCreateRoom
+  description: ''
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseRoom'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/request/find_or_create_room.yaml'

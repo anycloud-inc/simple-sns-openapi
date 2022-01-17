@@ -1,0 +1,31 @@
+type: object
+title: EntityMessage
+description: ''
+properties:
+  id:
+    type: integer
+  content:
+    type: string
+  userId:
+    type: integer
+  roomId:
+    type: string
+  postId:
+    type: integer
+  createdAt:
+    type: string
+    format: date-time
+  updatedAt:
+    type: string
+    format: date-time
+  user:
+    $ref: './user.yaml'
+  post:
+    $ref: './post.yaml'
+
+required:
+  - id
+  - content
+  - roomId
+  - createdAt
+  - updatedAt

@@ -1,0 +1,30 @@
+# /account
+get:
+  tags: [account]
+  operationId: getAccount
+  responses:
+    '200':
+      $ref: '../openapi.yaml#/components/responses/ResponseNullableAccount'
+post:
+  tags: [account]
+  operationId: createAccount
+  requestBody:
+    content:
+      application/json:
+        schema:
+          title: RequestSignIn
+          type: object
+          properties:
+            name:
+              type: string
+            email:
+              type: string
+            password:
+              type: string
+          required:
+            - name
+            - email
+            - password
+  responses:
+    '200':
+      $ref: '../openapi.yaml#/components/responses/ResponseSignIn'

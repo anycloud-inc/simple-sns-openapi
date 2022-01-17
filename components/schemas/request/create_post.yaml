@@ -1,0 +1,10 @@
+title: RequestCreatePost
+type: object
+required:
+  - post
+properties:
+  post:
+    type: object
+    properties:
+      body:
+        type: string

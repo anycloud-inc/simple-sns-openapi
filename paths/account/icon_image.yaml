@@ -1,0 +1,13 @@
+# /account/icon_image
+patch:
+  tags: [account]
+  summary: ''
+  operationId: updateIconImage
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          $ref: '../../components/schemas/request/media.yaml'
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseAccount'

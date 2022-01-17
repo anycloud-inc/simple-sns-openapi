@@ -1,0 +1,11 @@
+description: OK
+content:
+  application/json:
+    schema:
+      title: ResponseMessage
+      type: object
+      properties:
+        message:
+          $ref: '../schemas/entity/message.yaml'
+      required:
+        - message

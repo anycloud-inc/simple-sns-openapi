@@ -1,0 +1,41 @@
+# /auth
+post:
+  tags: [auth]
+  operationId: signIn
+  requestBody:
+    content:
+      application/json:
+        schema:
+          title: RequestSignIn
+          type: object
+          properties:
+            email:
+              type: string
+            password:
+              type: string
+          required:
+            - email
+            - password
+  responses:
+    200:
+      $ref: '../openapi.yaml#/components/responses/ResponseSignIn'
+    400: 
+      $ref: '../openapi.yaml#/components/responses/ResponseBadRequest'
+
+delete:
+  tags: [auth]
+  operationId: signOut
+  requestBody:
+    content:
+      application/json:
+        schema:
+          title: RequestSignOut
+          type: object
+          properties:
+            deviceId:
+              type: string
+          required:
+            - deviceId
+  responses:
+    200:
+      $ref: '../openapi.yaml#/components/responses/ResponseSuccess'

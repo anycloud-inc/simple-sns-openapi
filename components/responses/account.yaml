@@ -1,0 +1,11 @@
+description: OK
+content:
+  application/json:
+    schema:
+      title: ResponseAccount
+      type: object
+      properties:
+        user:
+          $ref: '../schemas/entity/account.yaml'
+      required:
+        - user

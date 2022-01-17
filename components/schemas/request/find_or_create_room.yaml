@@ -1,0 +1,9 @@
+title: RequestFindOrCreateRoom
+type: object
+properties:
+  userIds:
+    type: array
+    items:
+      type: integer
+required:
+  - userIds

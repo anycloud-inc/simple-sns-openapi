@@ -1,0 +1,31 @@
+# /posts
+get:
+  tags: [post]
+  operationId: findPostList
+  parameters:
+    -
+      in: query
+      name: pagination
+      schema:
+        $ref: '../../openapi.yaml#/components/schemas/RequestPagination'
+    -
+      in: query
+      name: filter
+      required: true
+      schema:
+        $ref: '../../components/schemas/request/post_filter.yaml'
+  description: ''
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponsePostList'
+post:
+  tags: [post]
+  operationId: createPost
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/request/create_post.yaml'
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponsePost'

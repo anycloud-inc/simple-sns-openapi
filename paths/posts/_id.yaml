@@ -1,0 +1,19 @@
+# /posts/{id}
+parameters:
+  - schema:
+      type: number
+    name: id
+    in: path
+    required: true
+get:
+  tags: [post]
+  operationId: findPost
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponsePost'
+delete:
+  tags: [post]
+  operationId: deletePost
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseSuccess'

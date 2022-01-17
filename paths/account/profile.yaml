@@ -1,0 +1,21 @@
+# /account/profile
+patch:
+  tags: [account]
+  operationId: updateProfile
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseAccount'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          title: RequestUpdateProfile
+          type: object
+          properties:
+            name:
+              type: string
+            email:
+              type: string
+          required:
+            - name
+            - email
