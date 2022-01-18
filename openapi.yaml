@@ -27,6 +27,12 @@ paths:
     $ref: './paths/messages/via_post.yaml'
 
 components:
+  securitySchemes:
+    Bearer:
+      type: http
+      scheme: bearer
+      description: このAPIはBearerトークンを使って認証します
+
   schemas:
     EntityMessage:
       $ref: './components/schemas/entity/message.yaml'

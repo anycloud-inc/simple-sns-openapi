@@ -1,15 +1,15 @@
 # /posts
 get:
+  security:
+    - Bearer: []
   tags: [post]
   operationId: findPostList
   parameters:
-    -
-      in: query
+    - in: query
       name: pagination
       schema:
         $ref: '../../openapi.yaml#/components/schemas/RequestPagination'
-    -
-      in: query
+    - in: query
       name: filter
       required: true
       schema:
@@ -19,6 +19,8 @@ get:
     '200':
       $ref: '../../openapi.yaml#/components/responses/ResponsePostList'
 post:
+  security:
+    - Bearer: []
   tags: [post]
   operationId: createPost
   requestBody:

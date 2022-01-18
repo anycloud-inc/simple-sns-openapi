@@ -6,6 +6,8 @@ parameters:
     in: path
     required: true
 get:
+  security:
+    - Bearer: []
   tags: [room]
   responses:
     '200':

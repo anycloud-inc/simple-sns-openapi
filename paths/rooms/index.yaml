@@ -1,5 +1,7 @@
 # /rooms
 get:
+  security:
+    - Bearer: []
   tags: [room]
   operationId: findRoomList
   description: ''
@@ -7,6 +9,8 @@ get:
     '200':
       $ref: '../../openapi.yaml#/components/responses/ResponseRoomList'
 post:
+  security:
+    - Bearer: []
   tags: [room]
   operationId: findOrCreateRoom
   description: ''

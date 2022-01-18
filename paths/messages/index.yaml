@@ -1,5 +1,7 @@
 # /messages
 get:
+  security:
+    - Bearer: []
   tags: [messages]
   operationId: listMessages
   parameters:
@@ -17,6 +19,8 @@ get:
     '200':
       $ref: '../../openapi.yaml#/components/responses/ResponseMessageList'
 post:
+  security:
+    - Bearer: []
   tags: [message]
   operationId: createMessage
   requestBody:

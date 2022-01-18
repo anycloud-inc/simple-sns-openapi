@@ -19,10 +19,12 @@ post:
   responses:
     200:
       $ref: '../openapi.yaml#/components/responses/ResponseSignIn'
-    400: 
+    400:
       $ref: '../openapi.yaml#/components/responses/ResponseBadRequest'
 
 delete:
+  security:
+    - Bearer: []
   tags: [auth]
   operationId: signOut
   requestBody:

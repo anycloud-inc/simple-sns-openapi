@@ -8,6 +8,7 @@ content:
         user:
           $ref: '../schemas/entity/account.yaml'
         token:
+          description: このtokenをヘッダーに入れるて認証する
           type: string
       required:
         - user

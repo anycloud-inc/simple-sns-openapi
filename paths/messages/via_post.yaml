@@ -1,5 +1,7 @@
 # /messages/via_post
 post:
+  security:
+    - Bearer: []
   tags: [message]
   operationId: createMessageViaPost
   requestBody:
