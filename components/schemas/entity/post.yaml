@@ -4,7 +4,7 @@ title: ''
 properties:
   id:
     type: integer
-  content:
+  body:
     type: string
   userId:
     type: integer
@@ -13,11 +13,6 @@ properties:
     format: date-time
   user:
     $ref: 'user.yaml'
-  messages:
-    description: 投稿についたDM、リアクション一覧。自分の投稿でのみ取得可能。
-    type: array
-    items:
-      $ref: 'message.yaml'
 required:
   - id
   - body
