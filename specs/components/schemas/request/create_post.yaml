@@ -8,3 +8,5 @@ properties:
     properties:
       body:
         type: string
+    required:
+      - body

@@ -306,7 +306,7 @@ export interface operations {
       content: {
         "application/json": {
           post: {
-            body?: string;
+            body: string;
           };
         };
       };
