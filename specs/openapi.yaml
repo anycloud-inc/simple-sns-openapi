@@ -46,6 +46,8 @@ components:
       $ref: './components/schemas/entity/room.yaml'
     EntityRoomUser:
       $ref: './components/schemas/entity/room_user.yaml'
+    RequestPagination:
+      $ref: './components/schemas/request/pagination.yaml'
 
   responses:
     # General Responses
@@ -69,8 +71,6 @@ components:
       $ref: './components/responses/post.yaml'
     ResponsePostList:
       $ref: './components/responses/post_list.yaml'
-    ResponseMedia:
-      $ref: './components/responses/media.yaml'
     ResponseMessageList:
       $ref: './components/responses/message_list.yaml'
     ResponseMessage:

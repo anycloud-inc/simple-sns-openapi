@@ -1,0 +1,7 @@
+title: RequestPostFilter
+type: object
+properties:
+  userId:
+    type: number
+required:
+  - userId

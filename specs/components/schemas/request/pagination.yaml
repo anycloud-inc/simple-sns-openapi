@@ -1,0 +1,13 @@
+type: object
+properties:
+  cursor:
+    type: number
+  isNext:
+    type: boolean
+  size:
+    type: number
+  order:
+    type: string
+    enum:
+      - ASC
+      - DESC
