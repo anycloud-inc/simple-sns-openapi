@@ -289,7 +289,7 @@ export interface operations {
     parameters: {
       query: {
         pagination?: components["schemas"]["RequestPagination"];
-        filter: {
+        filter?: {
           userId: number;
         };
       };
