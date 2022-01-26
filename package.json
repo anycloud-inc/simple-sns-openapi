@@ -1,0 +1,10 @@
+{
+  "name": "simple_sns_openapi",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "openapi-typescript": "^5.1.1",
+    "redoc-cli": "^0.13.5",
+    "swagger-cli": "^4.0.4"
+  }
+}
