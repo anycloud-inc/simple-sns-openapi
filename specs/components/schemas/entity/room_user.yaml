@@ -6,9 +6,6 @@ properties:
     type: string
   userId:
     type: integer
-  readAt:
-    type: string
-    format: date-time
   user:
     $ref: 'user.yaml'
 

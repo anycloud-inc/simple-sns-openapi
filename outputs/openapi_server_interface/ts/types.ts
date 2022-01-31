@@ -43,14 +43,6 @@ export interface paths {
       };
     };
   };
-  "/rooms/{id}/read": {
-    patch: operations["updateReadAt"];
-    parameters: {
-      path: {
-        id: string;
-      };
-    };
-  };
   "/messages": {
     get: operations["listMessages"];
     post: operations["createMessage"];
@@ -107,8 +99,6 @@ export interface components {
     EntityRoomUser: {
       roomId: string;
       userId: number;
-      /** Format: date-time */
-      readAt?: string;
       user?: components["schemas"]["EntityUser"];
     };
     RequestPagination: {
@@ -355,16 +345,6 @@ export interface operations {
     };
   };
   findRoom: {
-    parameters: {
-      path: {
-        id: string;
-      };
-    };
-    responses: {
-      200: components["responses"]["ResponseRoom"];
-    };
-  };
-  updateReadAt: {
     parameters: {
       path: {
         id: string;
