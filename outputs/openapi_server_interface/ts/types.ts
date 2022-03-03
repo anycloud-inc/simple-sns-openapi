@@ -101,13 +101,22 @@ export interface components {
       userId: number;
       user?: components["schemas"]["EntityUser"];
     };
+    /** @description 最新のデータをn件取得したい場合、cursorは指定せず、sizeにnを入れる。idがm以降のデータをn件取得したい場合、cursorにm、sizeにnを入れる。 */
     RequestPagination: {
+      /** @description 取得するデータの基準点を決める。例えば10~1までのidのデータがあった際に5を指定すればidが4,3,2,1のデータを取得する。 */
       cursor?: number;
-      /** @default true */
+      /**
+       * @description trueの場合cursorで指定したidよりも大きいidのデータを取得する。falseの場合は小さいもの取得する。
+       * @default true
+       */
       isNext?: boolean;
-      /** @default 50 */
+      /**
+       * @description 取得するデータの数を決める
+       * @default 50
+       */
       size?: number;
       /**
+       * @description データをDESCの場合降順に、ASCの場合は昇順に並び替えて取得する
        * @default DESC
        * @enum {string}
        */
@@ -261,7 +270,10 @@ export interface operations {
     requestBody: {
       content: {
         "multipart/form-data": {
-          /** Format: binary */
+          /**
+           * Format: binary
+           * @description ただのstringではなくFileなどをアップロードする必要があるので注意
+           */
           file: string;
         };
       };

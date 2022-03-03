@@ -4,5 +4,6 @@ properties:
   file:
     type: string
     format: binary
+    description: ただのstringではなくFileなどをアップロードする必要があるので注意
 required:
   - file
