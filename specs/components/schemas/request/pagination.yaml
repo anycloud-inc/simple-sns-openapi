@@ -1,17 +1,19 @@
 type: object
-desctiption: 最新のデータをn件取得したい場合、cursorは指定せず、sizeにnを入れる。idがm以降のデータをn件取得したい場合、cursorにm、sizeにnを入れる。
+description: 最新のデータをn件取得したい場合、cursorは指定せず、sizeにnを入れる。idがm以降のデータをn件取得したい場合、cursorにm、sizeにnを入れる。
 properties:
   cursor:
-    desctiption: 取得するデータの基準点を決める。例えば10~1までのidのデータがあった際に5を指定すればidが4,3,2,1のデータを取得する
+    description: 取得するデータの基準点を決める。例えば10~1までのidのデータがあった際に5を指定すればidが4,3,2,1のデータを取得する。
     type: number
   isNext:
+    description: trueの場合cursorで指定したidよりも大きいidのデータを取得する。falseの場合は小さいもの取得する。
     type: boolean
     default: true
   size:
-    desctiption: 取得するデータの数を決める
+    description: 取得するデータの数を決める
     type: number
     default: 50
   order:
+    description: データをDESCの場合降順に、ASCの場合は昇順に並び替えて取得する
     type: string
     default: DESC
     enum:
