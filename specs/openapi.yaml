@@ -1,7 +1,15 @@
 openapi: 3.0.2
+
 info:
   title: simple-sns API
   version: 1.0.0
+
+servers:
+  - url: http://localhost:{port}
+    description: Local Server
+  - url: https://simp-340605.an.r.appspot.com
+    description: Public Server
+
 paths:
   /auth:
     $ref: './paths/auth.yaml'
