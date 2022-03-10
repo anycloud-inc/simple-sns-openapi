@@ -27,8 +27,6 @@ paths:
     $ref: './paths/rooms/index.yaml'
   '/rooms/{id}':
     $ref: './paths/rooms/_id.yaml'
-  '/rooms/{id}/read':
-    $ref: './paths/rooms/read.yaml'
   /messages:
     $ref: './paths/messages/index.yaml'
   /messages/via_post:
