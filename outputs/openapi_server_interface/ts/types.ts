@@ -31,6 +31,14 @@ export interface paths {
       };
     };
   };
+  "/posts/{id}/viewables": {
+    patch: operations["updatePostViewables"];
+    parameters: {
+      path: {
+        id: number;
+      };
+    };
+  };
   "/rooms": {
     get: operations["findRoomList"];
     post: operations["findOrCreateRoom"];
@@ -337,6 +345,23 @@ export interface operations {
     };
     responses: {
       200: components["responses"]["ResponseSuccess"];
+    };
+  };
+  updatePostViewables: {
+    parameters: {
+      path: {
+        id: number;
+      };
+    };
+    responses: {
+      200: components["responses"]["ResponsePost"];
+    };
+    requestBody: {
+      content: {
+        "application/json": {
+          viewableUserIds: number[];
+        };
+      };
     };
   };
   findRoomList: {

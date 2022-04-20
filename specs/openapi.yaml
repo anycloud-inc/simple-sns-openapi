@@ -23,6 +23,8 @@ paths:
     $ref: './paths/posts/index.yaml'
   '/posts/{id}':
     $ref: './paths/posts/_id.yaml'
+  '/posts/{id}/viewables':
+    $ref: './paths/posts/viewables.yaml'
   /rooms:
     $ref: './paths/rooms/index.yaml'
   '/rooms/{id}':

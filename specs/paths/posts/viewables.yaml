@@ -1,0 +1,26 @@
+# /{id}/viewables
+parameters:
+  - schema:
+      type: number
+    name: id
+    in: path
+    required: true
+patch:
+  tags: [post]
+  operationId: updatePostViewables
+  requestBody:
+    content:
+      application/json:
+        schema:
+          title: RequestUpdatePostViewables
+          type: object
+          properties:
+            viewableUserIds:
+              type: array
+              items:
+                type: integer
+          required:
+            - viewableUserIds
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponsePost'
