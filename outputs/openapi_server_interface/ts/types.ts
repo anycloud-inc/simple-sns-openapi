@@ -6,7 +6,6 @@
 export interface paths {
   "/auth": {
     post: operations["signIn"];
-    delete: operations["signOut"];
   };
   "/account": {
     get: operations["getAccount"];
@@ -228,18 +227,6 @@ export interface operations {
         "application/json": {
           email: string;
           password: string;
-        };
-      };
-    };
-  };
-  signOut: {
-    responses: {
-      200: components["responses"]["ResponseSuccess"];
-    };
-    requestBody: {
-      content: {
-        "application/json": {
-          deviceId: string;
         };
       };
     };

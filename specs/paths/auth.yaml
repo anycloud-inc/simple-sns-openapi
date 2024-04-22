@@ -18,26 +18,6 @@ post:
             - password
   responses:
     200:
-      $ref: '../openapi.yaml#/components/responses/ResponseSignIn'
+      $ref: "../openapi.yaml#/components/responses/ResponseSignIn"
     400:
-      $ref: '../openapi.yaml#/components/responses/ResponseBadRequest'
-
-delete:
-  security:
-    - Bearer: []
-  tags: [auth]
-  operationId: signOut
-  requestBody:
-    content:
-      application/json:
-        schema:
-          title: RequestSignOut
-          type: object
-          properties:
-            deviceId:
-              type: string
-          required:
-            - deviceId
-  responses:
-    200:
-      $ref: '../openapi.yaml#/components/responses/ResponseSuccess'
+      $ref: "../openapi.yaml#/components/responses/ResponseBadRequest"
